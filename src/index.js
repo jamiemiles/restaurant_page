@@ -1,3 +1,5 @@
-import "./website";
+import { appendToContent } from "./website";
+import { hamburgerAnimation } from "./website";
 
-console.log(createBackgroundImage());
+appendToContent();
+hamburgerAnimation();
