@@ -9,20 +9,35 @@ function createNav() {
   const about = document.createElement("li");
   const a1 = document.createElement("a");
   a1.href = "#";
+  about.classList.add("about-btn");
   about.appendChild(a1);
   a1.textContent = "About";
+  about.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    about.classList.toggle("active");
+  });
 
   const contact = document.createElement("li");
   const a2 = document.createElement("a");
   a2.href = "#";
+  contact.classList.add("contact-btn");
   contact.appendChild(a2);
   a2.textContent = "Contact";
+  contact.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    contact.classList.toggle("active");
+  });
 
   const menu = document.createElement("li");
   const a3 = document.createElement("a");
   a3.href = "#";
+  menu.classList.add("menu-btn");
   menu.appendChild(a3);
   a3.textContent = "Menu";
+  menu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    menu.classList.toggle("active");
+  });
 
   ul.appendChild(about);
   ul.appendChild(contact);
@@ -66,11 +81,19 @@ function createButton() {
   return div;
 }
 
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
+  return main;
+}
+
 function appendToContent() {
   const content = document.getElementById("content");
   content.appendChild(createNav());
   content.appendChild(createHeading());
   content.appendChild(createButton());
+  content.appendChild(createMain());
   return content;
 }
 

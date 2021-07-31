@@ -2,10 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 #content {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/hero_img.png");
+    url("images/hero_img.png");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -62,6 +63,7 @@ nav {
 }
 
 @media screen and (max-width: 375px) {
+  /* Navigation and Hamburger properties */
   .line {
     width: 30px;
     height: 2px;
@@ -81,7 +83,7 @@ nav {
   .nav-links {
     position: fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
-      url("/menu_img.png");
+      url("images/menu_img.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -92,8 +94,8 @@ nav {
     pointer-events: none;
   }
   .nav-links.open {
-    clip-path: circle(1000px at -90% -10%);
-    -webkit-clip-path: circle(1000px at -90% -10%);
+    clip-path: circle(1100px at -90% -10%);
+    -webkit-clip-path: circle(1100px at -90% -10%);
     pointer-events: all;
   }
   .enter-btn.remove {
@@ -103,16 +105,28 @@ nav {
   }
   .hamburger.animate :nth-child(1) {
     transition: all 0.3s ease-in-out;
-    transform: translateY(18px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
   .hamburger.animate :nth-child(2) {
     transition: all 0.5s ease-in-out;
-    transform: rotate(360deg);
+    transform: translateY(19px) rotate(180deg);
     opacity: 0;
   }
 
   .hamburger.animate :nth-child(3) {
     transition: all 0.3s ease-in-out;
-    transform: rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* Menu Properties */
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    text-align: center;
+  }
+  .menu img {
+    width: 300px;
+    height: auto;
   }
 }
