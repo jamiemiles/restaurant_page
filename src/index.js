@@ -1,1 +1,3 @@
-console.log("testing testing 1 2 3...");
+import "./website";
+
+console.log(createBackgroundImage());
