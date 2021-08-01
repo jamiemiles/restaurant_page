@@ -3,8 +3,6 @@ import { displayHome } from "./home";
 import { displayContact } from "./contact";
 
 function createNav() {
-  // Create nav element
-  const hamburger = document.querySelector(".hamburger");
   const nav = document.createElement("nav");
   const ul = document.createElement("ul");
   ul.classList.add("nav-links");
@@ -31,7 +29,6 @@ function createNav() {
   const contact = document.createElement("li");
   contact.classList.add("button-nav");
   contact.textContent = "Contact";
-
   contact.addEventListener("click", (e) => {
     if (e.target.classList.contains(" active")) {
       return;
@@ -58,7 +55,6 @@ function createHamburger() {
     div.classList.add("line");
     hamburger.appendChild(div);
   }
-
   return hamburger;
 }
 
@@ -70,7 +66,6 @@ function hamburgerAnimation() {
     navLinks.classList.toggle("open");
     hamburger.classList.toggle("animate");
   });
-
   lines.forEach((line) => {
     line.addEventListener("click", () => {
       line.classList.toggle("animate");
@@ -81,7 +76,6 @@ function hamburgerAnimation() {
 function createMain() {
   const main = document.createElement("main");
   main.classList.add("tab-content");
-
   return main;
 }
 
@@ -103,7 +97,6 @@ function appendToContent() {
   const content = document.getElementById("content");
   content.appendChild(createNav());
   content.appendChild(createMain());
-
   displayHome();
 }
 
