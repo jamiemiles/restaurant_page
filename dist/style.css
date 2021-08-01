@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+.tab-content {
+  min-height: 100vh;
+}
 #content {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/hero_img.png");
@@ -13,6 +16,14 @@
 }
 nav {
   height: 10vh;
+  background-color: rgab(0, 0, 0, 0.3);
+  border-bottom: 1px solid whitesmoke;
+}
+.button-nav:hover {
+  transform: translateY(-5px);
+}
+.button-nav.active {
+  border-bottom: 1px solid whitesmoke;
 }
 .nav-links {
   display: flex;
@@ -36,9 +47,10 @@ nav {
   line-height: 500px;
 }
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(221, 218, 214);
   word-spacing: 10px;
+  font-family: "MonteCarlo", cursive;
 }
 .home {
   min-height: 100vh;
@@ -70,7 +82,70 @@ nav {
   cursor: pointer;
   transform: scale(1.1);
 }
-@media screen and (max-width: 375px) {
+/* Contact Form */
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+}
+.contact h2,
+.contact h3 {
+  text-align: center;
+  color: whitesmoke;
+  padding: 5px;
+}
+.form input,
+.form textarea {
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+}
+.send-btn {
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid whitesmoke;
+  background: transparent;
+  color: whitesmoke;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bolder;
+}
+.send-btn:hover {
+  transition: all 0.4s ease-out;
+  background-color: whitesmoke;
+  color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 100px;
+    text-align: center;
+    gap: 100px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 100px;
+    text-align: center;
+    gap: 100px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .tab-content {
+    min-height: 100vh;
+  }
   /* Navigation and Hamburger properties */
   .line {
     width: 30px;
@@ -142,5 +217,37 @@ nav {
     height: 200px;
     object-fit: cover;
     margin-top: 50px;
+  }
+
+  /* Contact Form */
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+  }
+  .contact h2,
+  .contact h3 {
+    text-align: center;
+    color: whitesmoke;
+    padding: 5px;
+  }
+  .form input,
+  .form textarea {
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+  }
+  .send-btn {
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bolder;
   }
 }

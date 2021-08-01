@@ -5,37 +5,37 @@ function createMenu() {
   menu.appendChild(
     createMeal(
       "Baguette",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
   menu.appendChild(
     createMeal(
       "Burger",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
   menu.appendChild(
     createMeal(
       "Cheesecake",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
   menu.appendChild(
     createMeal(
       "Pancakes",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
   menu.appendChild(
     createMeal(
       "Pizza",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
   menu.appendChild(
     createMeal(
       "Ramen",
-      "Straight from the heart of Italy, our award winning chef Simone Lawler will cook you her signature dish!"
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada velit vitae enim rutrum, ac varius nisl pellentesque. Nulla facilisi. Vestibulum gravida orci mauris, in euismod erat fermentum eget."
     )
   );
 

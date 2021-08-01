@@ -3,7 +3,7 @@ function createHeading() {
   aboutUs.classList.add("about-us");
   const h1 = document.createElement("h1");
   h1.classList.add("title");
-  h1.textContent = "The Simmy One";
+  h1.textContent = "The Moody Cow";
   aboutUs.appendChild(h1);
   return aboutUs;
 }

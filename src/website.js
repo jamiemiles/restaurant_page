@@ -1,44 +1,31 @@
 import { displayMenu } from "./menu";
 import { displayHome } from "./home";
+import { displayContact } from "./contact";
 
 function createNav() {
   // Create nav element
-  const hamburger = document.querySelector("hamburger");
+  const hamburger = document.querySelector(".hamburger");
   const nav = document.createElement("nav");
   const ul = document.createElement("ul");
   ul.classList.add("nav-links");
 
   const home = document.createElement("li");
   home.classList.add("button-nav", "active");
-
   home.textContent = "Home";
-
   home.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
+
     setActiveTab(home);
     displayHome();
   });
 
   const menu = document.createElement("li");
   menu.classList.add("button-nav");
-
   menu.textContent = "Menu";
-
   menu.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
     setActiveTab(menu);
     displayMenu();
-  });
-
-  const about = document.createElement("li");
-  about.classList.add("button-nav");
-  about.textContent = "About";
-  about.addEventListener("click", (e) => {
-    if (e.target.classList.contains(" active")) {
-      return;
-    }
-    setActiveTab(about);
-    // displayAbout();
   });
 
   const contact = document.createElement("li");
@@ -50,12 +37,12 @@ function createNav() {
       return;
     }
     setActiveTab(contact);
+    displayContact();
   });
 
   ul.appendChild(home);
   ul.appendChild(menu);
   ul.appendChild(contact);
-  ul.appendChild(about);
   nav.appendChild(ul);
   nav.appendChild(createHamburger());
 
@@ -116,7 +103,8 @@ function appendToContent() {
   const content = document.getElementById("content");
   content.appendChild(createNav());
   content.appendChild(createMain());
-  return content;
+
+  displayHome();
 }
 
 export { appendToContent };
