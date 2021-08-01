@@ -7,7 +7,7 @@
 #content {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/hero_img.png");
-  height: 100%;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
@@ -22,9 +22,10 @@ nav {
   justify-content: space-evenly;
   align-items: center;
 }
-.nav-links li a {
+.nav-links li {
   color: whitesmoke;
   text-decoration: none;
+  cursor: pointer;
 }
 .about-us {
   display: flex;
@@ -39,29 +40,36 @@ nav {
   color: rgb(221, 218, 214);
   word-spacing: 10px;
 }
-.btn-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.enter-btn {
-  position: absolute;
-  bottom: 40px;
-  background: transparent;
-  outline: none;
-  border: 1px solid whitesmoke;
-  color: rgb(221, 218, 214);
-  padding: 10px;
-  width: 40%;
-  cursor: pointer;
-}
-.enter-btn:hover {
-  transition: all 0.4s ease-out;
-  background: rgb(221, 218, 214);
-  color: black;
+.home {
+  min-height: 100vh;
 }
 
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 100px;
+  text-align: center;
+  gap: 100px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.menu img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.meal-item h2,
+.meal-item p {
+  color: whitesmoke;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.meal-item img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 @media screen and (max-width: 375px) {
   /* Navigation and Hamburger properties */
   .line {
@@ -75,9 +83,8 @@ nav {
   }
   .hamburger {
     z-index: 2;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
-    margin-left: 6px;
     margin-top: 6px;
   }
   .nav-links {
@@ -97,11 +104,6 @@ nav {
     clip-path: circle(1100px at -90% -10%);
     -webkit-clip-path: circle(1100px at -90% -10%);
     pointer-events: all;
-  }
-  .enter-btn.remove {
-    transition: all 0.3s ease-out;
-    transform: translateX(100px);
-    opacity: 0;
   }
   .hamburger.animate :nth-child(1) {
     transition: all 0.3s ease-in-out;
@@ -123,10 +125,22 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+    margin-top: 100px;
     text-align: center;
+    gap: 100px;
+    background: rgba(0, 0, 0, 0.7);
   }
+  .meal-item h2,
+  .meal-item p {
+    color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .menu img {
     width: 300px;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 50px;
   }
 }

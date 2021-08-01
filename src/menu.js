@@ -64,10 +64,9 @@ function createMeal(mealName, description) {
 }
 
 function displayMenu() {
-  const main = document.getElementById("main");
+  const main = document.querySelector(".tab-content");
+  main.textContent = ""; // Why does this fix duplicating menu div?
   main.appendChild(createMenu());
-
-  return main;
 }
 
 export { displayMenu };
